@@ -1,6 +1,10 @@
 # HackAI_Tatarstan
 Решение Михаил Притугина
 
+```git clone --recurse-submodules https://github.com/Viliars/HackAI_Tatarstan```
+
+Все команды из инструкции выполняются внутри папки yolo7.
+
 ---
 ## How to use my model
 1) Скачать мою модель по [ссылке](https://disk.yandex.ru/d/oH3dAowCKgrl9g)
@@ -23,9 +27,9 @@
 ## How to Train
 1) Подготовить данные в формате Yolo
 
-2) Скачать предобученные веса `yolov7-e6e_training.pt`
+2) Скачать предобученные веса [yolov7-e6e_training.pt](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6e_training.pt)
 
-3) Обучить модель командой:
+3) Обучить модель в режиме transfer learning командой:
 
 ```python3 train_aux.py --workers 2 --device 0 --batch-size 4 --data data/dataset.yaml --img 1280 1280 --cfg cfg/training/yolov7-e6e-hack.yaml --weights 'yolov7-e6e_training.pt' --name yolov7-e6e-hack --hyp data/hyp.scratch.custom.yaml```
 
